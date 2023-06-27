@@ -1,7 +1,7 @@
 connexion
 Flask
 flask-marshmallow
-marshmallow-sqlalchemy
+marshmallow-sqlalchemy==0.26.1
 flask_jwt_extended
 Flask-SQLAlchemy
 swagger-ui-bundle
