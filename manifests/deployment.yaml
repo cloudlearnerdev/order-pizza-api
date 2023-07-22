@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-pizza-api
+  labels:
+    app: order-pizza-api
+  namespace: namespace-workflow-1690050697664
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order-pizza-api
+  template:
+    metadata:
+      labels:
+        app: order-pizza-api
+    spec:
+      containers:
+        - name: order-pizza-api
+          image: testdemoacrapp.azurecr.io/image-workflow-1690050697664:latest
+          ports:
+            - containerPort: 8000
